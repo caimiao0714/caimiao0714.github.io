@@ -185,7 +185,9 @@ body {
 }
 
 .masthead .tagline {
-  font-style: italic;
+  font-size: 25px;
+  /*font-style: italic;*/
+  /*font-weight: bold;*/
   text-align: right;
 }
 

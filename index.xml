@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>/</link>
+    <description>Recent content on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 09 Oct 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>莫雷与香港</title>
+      <link>/blog/morey_hongkong/</link>
+      <pubDate>Wed, 09 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/morey_hongkong/</guid>
+      <description>香港的游行与暴动已经持续了快四个月，最近莫雷的一个推特好像把香港问题推到了寻常的学生和篮球爱好者身边。</description>
+    </item>
+    
+  </channel>
+</rss>

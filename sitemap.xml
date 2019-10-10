@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/blog/politicians/</loc>
+    <lastmod>2019-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/blog/morey_hongkong/</loc>
     <lastmod>2019-10-09T00:00:00+00:00</lastmod>
   </url>
@@ -15,10 +20,6 @@
   <url>
     <loc>/</loc>
     <lastmod>2019-10-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/_index.knit/</loc>
   </url>
   
   <url>
@@ -52,6 +53,12 @@
   
   <url>
     <loc>/tags/freedom/</loc>
+    <lastmod>2019-10-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/politicians/</loc>
     <lastmod>2019-10-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

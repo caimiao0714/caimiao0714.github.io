@@ -11,6 +11,16 @@
     
     
     <item>
+      <title>政治家的电视访谈</title>
+      <link>/blog/politicians/</link>
+      <pubDate>Wed, 09 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/politicians/</guid>
+      <description>敬请期待…
+Hong Kong is part of China’ Joshua Wong Interview (1/2)We need to elect our own government’ Joshua Wong Interview (2/2)</description>
+    </item>
+    
+    <item>
       <title>莫雷与香港问题</title>
       <link>/blog/morey_hongkong/</link>
       <pubDate>Wed, 09 Oct 2019 00:00:00 +0000</pubDate>
@@ -37,19 +47,8 @@
       <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/blog/2019-10-09-oral-exam/</guid>
-      <description>今天比较顺利的通过了博士项目的口试（Oral exam），这个项目在国内相当于博士生的开题。
+      <description>今天比较顺利的通过了博士项目的口试（Oral exam），这项考试在国内相当于博士生的开题。
 博士生，博士候选人，以及博士美国与中国的博士生导师和论文委员会到底应该是裁判还是队友？</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/_index.knit/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/_index.knit/</guid>
-      <description>简介 我是蔡苗，现在是圣路易斯大学公共卫生学院三年级博士候选人，研究方向是生物统计学。预计2020年5月毕业，现在正在赶制博士生涯最后一项任务：毕业论文。论文的主题是运用子抽样汉密尔顿蒙特卡罗模拟来建立适用于大规模卡车司机驾驶行为的贝叶斯统计方法。我同时还在美国退伍军人事务部的临床流行病学研究中心(圣路易斯分部)担当生物统计研究员，运用SAS和美国退伍军人的数据做一些临床流行病（主要是慢性肾病和糖尿病）的研究。
-我的研究兴趣是贝叶斯统计，可修复系统可靠性，临床流行病，卫生政策，因果推断。我的研究发表可以在Google Scholar和Research Gate上查看，我在GitHub上也比较活跃。有兴趣的也可以查看我的个人简历或者English CV。
-以下是我近期的博文：</description>
     </item>
     
   </channel>

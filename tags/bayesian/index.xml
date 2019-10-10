@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bayesian on </title>
+    <link>/tags/bayesian/</link>
+    <description>Recent content in Bayesian on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 10 Oct 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/bayesian/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>INLA贝叶斯模型</title>
+      <link>/notes/inla/</link>
+      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/notes/inla/</guid>
+      <description> Virgilio Gómez-Rubio (2019), A gentle INLA tutorial, Haakon Bakka (2017) Small Tutorials on INLA, Wang Xiaofeng (2019) Bayesian Regression Modeling with INLA, Faraway, Julian (2016) INLA for linear mixed models.  </description>
+    </item>
+    
+  </channel>
+</rss>

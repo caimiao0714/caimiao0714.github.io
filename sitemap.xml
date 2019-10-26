@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/post/2019/10/24/39-chinese-died-in-a-truck/</loc>
+    <loc>/blog/39-chinese-died-in-a-truck/</loc>
     <lastmod>2019-10-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -40,7 +40,7 @@
   
   <url>
     <loc>/blog/</loc>
-    <lastmod>2019-10-09T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -76,12 +76,6 @@
   <url>
     <loc>/tags/phd/</loc>
     <lastmod>2019-10-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2019-10-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

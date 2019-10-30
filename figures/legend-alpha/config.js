@@ -1,0 +1,1 @@
+IDRViewer.config = {"pagecount":1,"title":"R Graphics Output","author":"","fileName":"legend-alpha.pdf","bounds":[[1100,678]],"bookmarks":[],"thumbnailType":"jpg","pageType":"svg","pageLabels":[]};

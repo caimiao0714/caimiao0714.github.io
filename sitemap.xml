@@ -48,6 +48,10 @@
   </url>
   
   <url>
+    <loc>/_index.utf8/</loc>
+  </url>
+  
+  <url>
     <loc>/tags/academic/</loc>
     <lastmod>2019-10-29T00:00:00+00:00</lastmod>
     <priority>0</priority>

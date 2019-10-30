@@ -5,10 +5,31 @@
     <link>/tags/academic/</link>
     <description>Recent content in Academic on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 29 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/academic/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>高影响力期刊发表，那些编辑和你的导师没有告诉过你的不成文的秘密</title>
+      <link>/blog/high-impact-paper-secrets/</link>
+      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/high-impact-paper-secrets/</guid>
+      <description>此部分大部分来自于本人在美国队伍军人事务部临床流行病研究中心的工作经验。
+期刊选择主题的影响力和新颖程度方法和数据分析的艺术性投稿期刊的选择作者组成你所在的研究小组
+信号与噪声：不牢靠的结果</description>
+    </item>
+    
+    <item>
+      <title>Data visualization using ggplot2</title>
+      <link>/notes/data-visualization-using-ggplot2/</link>
+      <pubDate>Tue, 29 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/notes/data-visualization-using-ggplot2/</guid>
+      <description>Kaplan-Meier survival plots using survminerCode and data could be found in this repository.
+One Kaplan-Meier plot using survminersurvminer::ggsurvplot(survfit(utotalPSM ~ integ, data = total), pval = TRUE, conf.int = TRUE,legend.title = &amp;quot;Hospital type&amp;quot;,legend.labs = c(&amp;quot;Ordinary Hospitals&amp;quot;, &amp;quot;Medical Consortium Hospitals&amp;quot;),submain = &amp;quot;Kaplan-Meier plot for a pool of three patient cohorts&amp;quot;,xlab = &amp;quot;Survival length of stay&amp;quot;,palette = c(&amp;quot;firebrick1&amp;quot;, &amp;quot;green4&amp;quot;),font.submain = c(16, &amp;quot;bold&amp;quot;))Arrange 3 survival plotsplot3cohorts = survminer::arrange_ggsurvplots(list(ggfei.</description>
+    </item>
     
     <item>
       <title>Rmarkdown .pdf tricks</title>

@@ -5,21 +5,10 @@
     <link>/tags/academic/</link>
     <description>Recent content in Academic on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 01 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/academic/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>高影响力期刊发表，那些编辑和你的导师没有告诉过你的不成文的秘密</title>
-      <link>/blog/high-impact-paper-secrets/</link>
-      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/high-impact-paper-secrets/</guid>
-      <description>此部分大部分来自于本人在美国队伍军人事务部临床流行病研究中心的工作经验。
-期刊选择主题的影响力和新颖程度方法和数据分析的艺术性投稿期刊的选择作者组成你所在的研究小组
-信号与噪声：不牢靠的结果</description>
-    </item>
     
     <item>
       <title>Data visualization using ggplot2</title>
@@ -37,7 +26,7 @@
       
       <guid>/notes/rmarkdown-pdf-tricks/</guid>
       <description>LaTeX HeaderTo make a lot of tricks work, you need to header-includes:
-- \usepackage{setspace}: spacing\doublespacing\singlespacing\linespread{1.5}- \usepackage{dcolumn}: to make stargazer tables work- \usepackage{lscape}:\newcommand{\blandscape}{\begin{landscape}}\newcommand{\elandscape}{\end{landscape}}- \usepackage{lineno} \linenumbers
+- \usepackage{setspace}: spacing\doublespacing\singlespacing\linespread{1.5}- \usepackage{dcolumn}: to make stargazer tables work- \usepackage{lscape}:- \AtBeginDocument{\let\maketitle\relax}: do not make title\newcommand{\blandscape}{\begin{landscape}}\newcommand{\elandscape}{\end{landscape}}- \usepackage{lineno} \linenumbers
 - \usepackage[bottom]{footmisc}: make footnote on the first page to bottom
 Make a box around the content:
 \fbox{\begin{minipage}{\linewidth}1. (11 Points: 2,3,3,3) Researchers are interested in the proportion of drivers in the city who use their cell phone by holding it with their hands while driving (i.</description>

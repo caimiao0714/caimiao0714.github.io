@@ -26,7 +26,7 @@
       
       <guid>/notes/rmarkdown-pdf-tricks/</guid>
       <description>LaTeX HeaderTo make a lot of tricks work, you need to header-includes:
-- \usepackage{setspace}: spacing\doublespacing\singlespacing\linespread{1.5}- \usepackage{dcolumn}: to make stargazer tables work- \usepackage{lscape}:\newcommand{\blandscape}{\begin{landscape}}\newcommand{\elandscape}{\end{landscape}}- \usepackage{lineno} \linenumbers
+- \usepackage{setspace}: spacing\doublespacing\singlespacing\linespread{1.5}- \usepackage{dcolumn}: to make stargazer tables work- \usepackage{lscape}:- \AtBeginDocument{\let\maketitle\relax}: do not make title\newcommand{\blandscape}{\begin{landscape}}\newcommand{\elandscape}{\end{landscape}}- \usepackage{lineno} \linenumbers
 - \usepackage[bottom]{footmisc}: make footnote on the first page to bottom
 Make a box around the content:
 \fbox{\begin{minipage}{\linewidth}1. (11 Points: 2,3,3,3) Researchers are interested in the proportion of drivers in the city who use their cell phone by holding it with their hands while driving (i.</description>

@@ -5,10 +5,23 @@
     <link>/</link>
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 27 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Rmarkdown .pdf tricks</title>
+      <link>/notes/rmarkdown-pdf-tricks/</link>
+      <pubDate>Tue, 29 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/notes/rmarkdown-pdf-tricks/</guid>
+      <description>LaTeX HeaderTo make a lot of tricks work, you need to header-includes:
+- \usepackage{setspace}: spacing\doublespacing\singlespacing\linespread{1.5}- \usepackage{dcolumn}: to make stargazer tables work- \usepackage{lscape}:\newcommand{\blandscape}{\begin{landscape}}\newcommand{\elandscape}{\end{landscape}}- \usepackage{lineno} \linenumbers
+- \usepackage[bottom]{footmisc}: make footnote on the first page to bottom
+Make a box around the content:
+\fbox{\begin{minipage}{\linewidth}1. (11 Points: 2,3,3,3) Researchers are interested in the proportion of drivers in the city who use their cell phone by holding it with their hands while driving (i.</description>
+    </item>
     
     <item>
       <title>中美博士研究生培养若干问题的思考</title>
@@ -99,17 +112,6 @@ Hong Kong is part of China’ Joshua Wong Interview (1/2)We need to elect our o
 导师和论文委员会到底应该是裁判还是队友？对比中美博士研究生培养的制度，我觉得有一个很突出的问题是：论文委员会究竟应该是作为裁判还是队友。在美国的培养制度中，导师和论文委员会更多的是作为队友的角度，前期要同意论文的大致主题，阅读并且帮助修改开题报告。在后续的论文写作中，也需要反复阅读内容并且提出修改建议。而在中国的制度中，论文委员会则是几乎是完全地充当裁判的角色，委员会都是临时决定（主要取决于哪些老师在开题或者答辩的时候有时间），在报告的时候提出一些问题和修改意见。
 在现在这个时代，由于每个研究方向都有非常高的专业性，因此每个人的研究方向都非常细，很难有哪一位导师的知识面能做到面面俱到，因此在博士培养的过程中，很多时候需要多个学科的教授来指导同一位学生。但是论文主题、研究目标和方法。以及后续的论文完成，都需要反反复复的尝试和修改。如果只是在论文开题或者答辩的时候提出一些批评或者建议，往往为时已晚。开题报告或者论文已经定型，学生投入了太多精力在错误的方向走的太远，修改的成本太高。在中国的培养体制中，论文委员会为每位学生投入的精力太少，仅仅只是答辩时候不到一个小时的投入，恐怕很难说能作为队友推着学生往更好的方向走更远，更多的时候恐怕还是拿着机关枪对着手无寸铁的学生进行扫射。有这么好的意见，为什么不在还没有做的时候提出来呢？
 </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/_index.utf8/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/_index.utf8/</guid>
-      <description>简介 我是蔡苗，现在是圣路易斯大学公共卫生学院三年级博士候选人，研究方向是生物统计学。预计2020年5月毕业，现在正在赶制博士生涯最后一项任务：毕业论文。论文的主题是运用子抽样汉密尔顿蒙特卡罗模拟来建立适用于大规模卡车司机驾驶行为的贝叶斯统计方法。我同时还在美国退伍军人事务部的临床流行病学研究中心(圣路易斯分部)担当生物统计研究员，运用SAS和美国退伍军人的数据做一些临床流行病（主要是慢性肾病和糖尿病）的研究。
-我的研究兴趣是贝叶斯统计，可修复系统可靠性，临床流行病，卫生政策，因果推断。我的研究发表可以在Google Scholar和Research Gate上查看，我在GitHub上也比较活跃。有兴趣的也可以查看我的个人简历或者English CV。
-以下是我近期的博文：</description>
     </item>
     
   </channel>

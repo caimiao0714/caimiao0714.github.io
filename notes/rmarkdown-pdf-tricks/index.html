@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Rmarkdown .pdf tricks - </title>
+    <meta property="og:title" content="Rmarkdown .pdf tricks - ">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    
+      
+      <meta property="description" content="To make a lot of tricks work, you need to header-includes:
+[&amp;hellip;] \newcommand{\blandscape}{\begin{landscape}}\newcommand{\elandscape}{\end{landscape}}- \usepackage{lineno} \linenumbers &amp;hellip;">
+      <meta property="og:description" content="To make a lot of tricks work, you need to header-includes:
+[&amp;hellip;] \newcommand{\blandscape}{\begin{landscape}}\newcommand{\elandscape}{\end{landscape}}- \usepackage{lineno} \linenumbers &amp;hellip;">
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="notes">
+    <header class="masthead">
+      <h1><a href="/"></a></h1>
+
+<p class="tagline">蔡苗 | Miao Cai</p>
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  <li><a href="/">主页 |   Home</a></li>
+  
+  <li><a href="/blog/">博文 |   Blogs</a></li>
+  
+  <li><a href="/notes/">笔记 |   Notes</a></li>
+  
+  <li><a href="/cv/cn.pdf">简历 | Chinese</a></li>
+  
+  <li><a href="/cv/en.pdf">CV | English</a></li>
+  
+  <li><a href="/about/">关于 |   About</a></li>
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>Rmarkdown .pdf tricks</h1>
+
+<h3>Miao Cai
+  /  2019-10-29</h3>
+<hr>
+
+
+      </header>
+
+
+
+
+
+
+<div id="latex-header" class="section level1">
+<h1>LaTeX Header</h1>
+<p>To make a lot of tricks work, you need to <code>header-includes:</code></p>
+<ul>
+<li><code>- \usepackage{setspace}</code>: spacing
+<ul>
+<li><code>\doublespacing</code></li>
+<li><code>\singlespacing</code></li>
+<li><code>\linespread{1.5}</code></li>
+</ul></li>
+<li><code>- \usepackage{dcolumn}</code>: to make <code>stargazer</code> tables work</li>
+<li><code>- \usepackage{lscape}</code>:</li>
+</ul>
+<pre><code>\newcommand{\blandscape}{\begin{landscape}}
+\newcommand{\elandscape}{\end{landscape}}</code></pre>
+<ul>
+<li><p><code>- \usepackage{lineno} \linenumbers</code></p></li>
+<li><p><code>- \usepackage[bottom]{footmisc}</code>: make footnote on the first page to bottom</p></li>
+<li><p>Make a box around the content:</p></li>
+</ul>
+<pre><code>\fbox{\begin{minipage}{\linewidth}
+1. (11 Points: 2,3,3,3) Researchers are interested in the proportion of drivers in the city who use their cell phone by holding it with their hands while driving (i.e., not using a blue-tooth, or hands-free device). Investigators chose a busy intersection, and observed every sixth car that passed going a particular direction. It was suggested that they look at every car and record whether the driver was using the cell phone, but often cars went by too fast and they could misidentify some drivers. So, the plan was to dispatch two investigators, one of whom counted the cars and chose every sixth car and the other looked carefully to see whether the driver was talking on the cell phone. They did this for two hours and observed 300 drivers.
+
+\begin{enumerate}
+\item What kind of a sample is this?
+\item Is it a reasonable sampling plan for determining the rate of cell phone usage while driving at that intersection at that time?
+\item Is this a reasonable plan for determining the rate of cell phone usage while driving for the city as a whole?
+\item Can you describe a better sampling plan? Explain.
+\end{enumerate}
+
+\end{minipage}}</code></pre>
+<ul>
+<li>Waterproof:</li>
+</ul>
+<pre><code>\AddToShipoutPictureFG{
+  \AtPageCenter{% or \AtTextCenter
+    \makebox[0pt]{\rotatebox[origin=c]{45}{%
+      \scalebox{8}{\texttransparent{0.1}{DRAFT}}%
+    }}
+  }
+}</code></pre>
+<p>It looks like:</p>
+<p><img src="/figures/fbox-LaTeX.png" /><!-- --></p>
+</div>
+<div id="yml-settings" class="section level1">
+<h1><code>yml</code> settings</h1>
+<ul>
+<li><code>keywords: flu shot; Chinese; attitudes; action</code></li>
+<li><code>bibliography: Refereces.bib</code></li>
+<li><code>csl: elsevier.csl</code></li>
+<li><code>geometry: "left=2cm,right=2cm,top=2cm,bottom=2cm"</code></li>
+<li>Journal articles:</li>
+</ul>
+<pre><code>output:
+  bookdown::pdf_book:
+    base_format: rticles::elsevier_article
+journal: &quot;Journal of Quality Technology&quot;</code></pre>
+<ul>
+<li>Link, citation, and color settings:</li>
+</ul>
+<pre><code>link-citations: yes
+linkcolor: blue
+urlcolor: red</code></pre>
+<ul>
+<li>Multi-line title:</li>
+</ul>
+<pre><code>title: |
+  | Truck Transportation Safety, Fatigue, Driver Characteristics and Weather: 
+  | An Exploratory Data Analysis and Visualization</code></pre>
+<ul>
+<li>Unnumbered sections</li>
+</ul>
+<pre><code>References {#references .unnumbered}
+===</code></pre>
+</div>
+
+
+  <footer>
+  
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  <hr>
+  <div class="copyright">&copy; <a href="https://caimiao0714.github.io">蔡苗 Miao Cai</a> 2019 <br> <a href="https://scholar.google.com/citations?user=kjFCzEkAAAAJ&amp;hl=en">GoogleScholar</a> | <a href="https://www.researchgate.net/profile/Miao_Cai2">ResearchGate</a> | <a href="https://github.com/caimiao0714">Github</a></div>
+  
+  </footer>
+  </article>
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-1988641-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </body>
+</html>
+

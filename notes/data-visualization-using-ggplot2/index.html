@@ -152,7 +152,8 @@
 <h1>Label lines using <code>ggrepel</code></h1>
 <pre class="r"><code>pacman::p_load(dplyr, ggplot2, ggrepel)
 nd %&gt;%
-  ggplot(aes(x = year, y = hr_update, group = variables, color = variables)) +
+  ggplot(aes(x = year, y = hr_update, 
+             group = variables, color = variables)) +
   geom_line() +
   labs(y = &quot;Time-varying HRs&quot;) +
   geom_label_repel(data = filter(nd, year == 2008, hr_update &gt;= 2),
@@ -164,7 +165,8 @@ nd %&gt;%
                    segment.size = 0.2,
                    na.rm = TRUE) +
   scale_colour_discrete(guide = &#39;none&#39;)+
-  scale_x_continuous(breaks = 2008:2018, labels = 2008:2018, limits = c(2006,2018))+
+  scale_x_continuous(breaks = 2008:2018, labels = 2008:2018, 
+                     limits = c(2006,2018))+
   theme_classic()</code></pre>
 <p><img src="/figures/label_lines_using_geom_label_repel.png" /><!-- --></p>
 </div>

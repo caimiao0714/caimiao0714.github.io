@@ -78,16 +78,8 @@
       <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/notes/inla/</guid>
-      <description>Virgilio Gómez-Rubio (2019),A gentle INLA tutorial,Haakon Bakka (2017) Small Tutorials on INLA,Wang Xiaofeng (2019) Bayesian Regression Modeling with INLA,Faraway, Julian (2016) INLA for linear mixed models.</description>
-    </item>
-    
-    <item>
-      <title>INLA贝叶斯模型</title>
-      <link>/notes/inla/</link>
-      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/notes/inla/</guid>
-      <description> Virgilio Gómez-Rubio (2019), A gentle INLA tutorial, Haakon Bakka (2017) Small Tutorials on INLA, Wang Xiaofeng (2019) Bayesian Regression Modeling with INLA, Faraway, Julian (2016) INLA for linear mixed models.  </description>
+      <description>一些有用的参考文献：
+Virgilio Gómez-Rubio (2019),A gentle INLA tutorial,Haakon Bakka (2017) Small Tutorials on INLA,Wang Xiaofeng (2019) Bayesian Regression Modeling with INLA,Faraway, Julian (2016) INLA for linear mixed models.</description>
     </item>
     
     <item>

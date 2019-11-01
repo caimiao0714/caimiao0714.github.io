@@ -5,10 +5,20 @@
     <link>/notes/</link>
     <description>Recent content in Notes on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 29 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 31 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>学术英文例句学习</title>
+      <link>/notes/english-learning/</link>
+      <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/notes/english-learning/</guid>
+      <description>The effect of cardiovascular outcomes has been less well characterized.The Trouble With Trucking
+But those drivers are the top echelon of the occupation and are not representative of the hundreds of thousands of people who toil in the industry’s underbelly.The previous requirements raised the cost of moving goods and stifled competition, but deregulation also took a toll on drivers by giving the industry a bigger financial incentive to lower costs and by weakening unions.</description>
+    </item>
     
     <item>
       <title>Data visualization using ggplot2</title>

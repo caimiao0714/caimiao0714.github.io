@@ -16,7 +16,7 @@
       <pubDate>Tue, 29 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/notes/data-visualization-using-ggplot2/</guid>
-      <description>Kaplan-Meier survival plots using survminer One Kaplan-Meier plot using survminer survminer::ggsurvplot(survfit(utotalPSM ~ integ, data = total), pval = TRUE, conf.int = TRUE, legend.title = &amp;quot;Hospital type&amp;quot;, legend.labs = c(&amp;quot;Ordinary Hospitals&amp;quot;, &amp;quot;Medical Consortium Hospitals&amp;quot;), submain = &amp;quot;Kaplan-Meier plot for a pool of three patient cohorts&amp;quot;, xlab = &amp;quot;Survival length of stay&amp;quot;, palette = c(&amp;quot;firebrick1&amp;quot;, &amp;quot;green4&amp;quot;), font.submain = c(16, &amp;quot;bold&amp;quot;))  Arrange 3 survival plots plot3cohorts = survminer::arrange_ggsurvplots( list(ggfei.m, ggwei.m, ggshiguan.m), nrow = 3, ncol = 1) Code and data.</description>
+      <description>Kaplan-Meier survival plots using survminerOne Kaplan-Meier plot using survminersurvminer::ggsurvplot(survfit(utotalPSM ~ integ, data = total), pval = TRUE, conf.int = TRUE,legend.title = &amp;quot;Hospital type&amp;quot;,legend.labs = c(&amp;quot;Ordinary Hospitals&amp;quot;, &amp;quot;Medical Consortium Hospitals&amp;quot;),submain = &amp;quot;Kaplan-Meier plot for a pool of three patient cohorts&amp;quot;,xlab = &amp;quot;Survival length of stay&amp;quot;,palette = c(&amp;quot;firebrick1&amp;quot;, &amp;quot;green4&amp;quot;),font.submain = c(16, &amp;quot;bold&amp;quot;))Arrange 3 survival plotsplot3cohorts = survminer::arrange_ggsurvplots(list(ggfei.m, ggwei.m, ggshiguan.m), nrow = 3, ncol = 1)Code and data.</description>
     </item>
     
   </channel>

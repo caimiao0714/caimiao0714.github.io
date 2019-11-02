@@ -5,10 +5,19 @@
     <link>/tags/r/</link>
     <description>Recent content in R on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 29 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Color palettes in R</title>
+      <link>/notes/color-palletes-in-r/</link>
+      <pubDate>Sat, 02 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/notes/color-palletes-in-r/</guid>
+      <description>R packages MapPalettes nationalparkcolors wesanderson viridis  Websites colorbrewer 2.0 open color    ggplot color best tricks you will love  R packages MapPalettes MapPalettes  devtools::install_github(&amp;quot;disarm-platform/MapPalettes&amp;quot;)  nationalparkcolors nationalparkcolors  devtools::install_github(&amp;quot;katiejolly/nationalparkcolors&amp;quot;)  wesanderson  wesanderson R package GitHub Wes Anderson Palettes  # devtools::install_github(&amp;quot;karthik/wesanderson&amp;quot;) pacman::p_load(dplyr, ggplot2, wesanderson) mtcars %&amp;gt;% filter(carb &amp;lt;= 4) %&amp;gt;% ggplot(aes(mpg, gear, color = factor(carb))) + geom_point() + theme_classic() + scale_color_manual(values = wes_palette(n = 4, name = &amp;quot;GrandBudapest1&amp;quot;))  viridis viridis</description>
+    </item>
     
     <item>
       <title>Data visualization using ggplot2</title>
@@ -16,7 +25,7 @@
       <pubDate>Tue, 29 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/notes/data-visualization-using-ggplot2/</guid>
-      <description>Kaplan-Meier survival plots using survminerOne Kaplan-Meier plot using survminersurvminer::ggsurvplot(survfit(utotalPSM ~ integ, data = total), pval = TRUE, conf.int = TRUE,legend.title = &amp;quot;Hospital type&amp;quot;,legend.labs = c(&amp;quot;Ordinary Hospitals&amp;quot;, &amp;quot;Medical Consortium Hospitals&amp;quot;),submain = &amp;quot;Kaplan-Meier plot for a pool of three patient cohorts&amp;quot;,xlab = &amp;quot;Survival length of stay&amp;quot;,palette = c(&amp;quot;firebrick1&amp;quot;, &amp;quot;green4&amp;quot;),font.submain = c(16, &amp;quot;bold&amp;quot;))Arrange 3 survival plotsplot3cohorts = survminer::arrange_ggsurvplots(list(ggfei.m, ggwei.m, ggshiguan.m), nrow = 3, ncol = 1)Code and data.</description>
+      <description>Kaplan-Meier survival plots using survminer One Kaplan-Meier plot using survminer survminer::ggsurvplot(survfit(utotalPSM ~ integ, data = total), pval = TRUE, conf.int = TRUE, legend.title = &amp;quot;Hospital type&amp;quot;, legend.labs = c(&amp;quot;Ordinary Hospitals&amp;quot;, &amp;quot;Medical Consortium Hospitals&amp;quot;), submain = &amp;quot;Kaplan-Meier plot for a pool of three patient cohorts&amp;quot;, xlab = &amp;quot;Survival length of stay&amp;quot;, palette = c(&amp;quot;firebrick1&amp;quot;, &amp;quot;green4&amp;quot;), font.submain = c(16, &amp;quot;bold&amp;quot;))  Arrange 3 survival plots plot3cohorts = survminer::arrange_ggsurvplots( list(ggfei.m, ggwei.m, ggshiguan.m), nrow = 3, ncol = 1) Code and data.</description>
     </item>
     
   </channel>

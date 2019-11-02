@@ -15,8 +15,8 @@
 
     
       
-      <meta property="description" content="devtools::install_github(&amp;quot;disarm-platform/MapPalettes&amp;quot;) [&amp;hellip;] devtools::install_github(&amp;quot;katiejolly/nationalparkcolors&amp;quot;) [&amp;hellip;] # &amp;hellip;">
-      <meta property="og:description" content="devtools::install_github(&amp;quot;disarm-platform/MapPalettes&amp;quot;) [&amp;hellip;] devtools::install_github(&amp;quot;katiejolly/nationalparkcolors&amp;quot;) [&amp;hellip;] # &amp;hellip;">
+      <meta property="description" content="# devtools::install_github(&amp;quot;disarm-platform/MapPalettes&amp;quot;) pacman::p_load(dplyr, ggplot2, MapPalettes) mtcars %&amp;gt;% filter(carb &amp;lt;= 4) %&amp;gt;% ggplot(aes(mpg, gear, color = factor(carb))) &#43; &amp;hellip;">
+      <meta property="og:description" content="# devtools::install_github(&amp;quot;disarm-platform/MapPalettes&amp;quot;) pacman::p_load(dplyr, ggplot2, MapPalettes) mtcars %&amp;gt;% filter(carb &amp;lt;= 4) %&amp;gt;% ggplot(aes(mpg, gear, color = factor(carb))) &#43; &amp;hellip;">
       
     
 
@@ -96,6 +96,8 @@
 <li><a href="#nationalparkcolors">nationalparkcolors</a></li>
 <li><a href="#wesanderson">wesanderson</a></li>
 <li><a href="#viridis">viridis</a></li>
+<li><a href="#rcolorbrewer">RColorBrewer</a></li>
+<li><a href="#brewer-function-from-ggplot2"><code>_brewer()</code> function from <code>ggplot2</code></a></li>
 </ul></li>
 <li><a href="#websites">Websites</a><ul>
 <li><a href="#colorbrewer-2.0">colorbrewer 2.0</a></li>
@@ -114,17 +116,41 @@
 <ol style="list-style-type: decimal">
 <li><a href="https://github.com/disarm-platform/MapPalettes">MapPalettes</a></li>
 </ol>
-<pre class="r"><code>devtools::install_github(&quot;disarm-platform/MapPalettes&quot;)</code></pre>
+<ul>
+<li>green_machine,</li>
+<li>irish_flag,</li>
+<li>tealberry_pie,</li>
+<li>sunset,</li>
+<li>the_joker,</li>
+<li>bruiser</li>
+</ul>
 <p><img src="/figures/MapPalettes.png" height="200px" style="display: block; margin: auto;" /></p>
+<pre class="r"><code># devtools::install_github(&quot;disarm-platform/MapPalettes&quot;)
+pacman::p_load(dplyr, ggplot2, MapPalettes)
+mtcars %&gt;% 
+  filter(carb &lt;= 4) %&gt;% 
+  ggplot(aes(mpg, gear, color = factor(carb))) + 
+  geom_point(size = 4) + theme_classic() + 
+  scale_color_manual(values = 
+      MapPalettes::map_palette(&quot;tealberry_pie&quot;, 4))</code></pre>
+<p><img src="/Notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-2-1.png" width="480" style="display: block; margin: auto;" /></p>
 </div>
 <div id="nationalparkcolors" class="section level2">
 <h2>nationalparkcolors</h2>
 <ol start="2" style="list-style-type: decimal">
 <li><a href="https://github.com/katiejolly/nationalparkcolors">nationalparkcolors</a></li>
 </ol>
-<pre class="r"><code>devtools::install_github(&quot;katiejolly/nationalparkcolors&quot;)</code></pre>
 <p><img src="/figures/nationalparkcolors.png" height="100px" style="display: block; margin: auto;" /></p>
 <p><img src="/figures/nationalparkcolors1.png" height="300px" style="display: block; margin: auto;" /></p>
+<pre class="r"><code># devtools::install_github(&quot;katiejolly/nationalparkcolors&quot;)
+pacman::p_load(dplyr, ggplot2, nationalparkcolors)
+mtcars %&gt;% 
+  filter(carb &lt;= 4) %&gt;% 
+  ggplot(aes(mpg, gear, color = factor(carb))) + 
+  geom_point(size = 4) + theme_classic() + 
+  scale_color_manual(values = 
+      nationalparkcolors::park_palette(&quot;MtRainier&quot;, 4))</code></pre>
+<p><img src="/Notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-5-1.png" width="480" style="display: block; margin: auto;" /></p>
 </div>
 <div id="wesanderson" class="section level2">
 <h2>wesanderson</h2>
@@ -133,20 +159,56 @@
 <li><a href="https://wesandersonpalettes.tumblr.com/">Wes Anderson Palettes</a></li>
 </ul>
 <p><img src="/figures/wesanderson.png" height="200px" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>pacman::p_load(wesanderson)
+names(wes_palettes)</code></pre>
+<pre><code>##  [1] &quot;BottleRocket1&quot;  &quot;BottleRocket2&quot;  &quot;Rushmore1&quot;      &quot;Rushmore&quot;      
+##  [5] &quot;Royal1&quot;         &quot;Royal2&quot;         &quot;Zissou1&quot;        &quot;Darjeeling1&quot;   
+##  [9] &quot;Darjeeling2&quot;    &quot;Chevalier1&quot;     &quot;FantasticFox1&quot;  &quot;Moonrise1&quot;     
+## [13] &quot;Moonrise2&quot;      &quot;Moonrise3&quot;      &quot;Cavalcanti1&quot;    &quot;GrandBudapest1&quot;
+## [17] &quot;GrandBudapest2&quot; &quot;IsleofDogs1&quot;    &quot;IsleofDogs2&quot;</code></pre>
 <pre class="r"><code># devtools::install_github(&quot;karthik/wesanderson&quot;)
 pacman::p_load(dplyr, ggplot2, wesanderson)
 mtcars %&gt;% 
   filter(carb &lt;= 4) %&gt;% 
   ggplot(aes(mpg, gear, color = factor(carb))) + 
-  geom_point() + theme_classic() + 
+  geom_point(size = 4) + theme_classic() + 
   scale_color_manual(values = 
       wes_palette(n = 4, name = &quot;GrandBudapest1&quot;))</code></pre>
-<p><img src="/Notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-7-1.png" width="480" style="display: block; margin: auto;" /></p>
+<p><img src="/Notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-8-1.png" width="480" style="display: block; margin: auto;" /></p>
 </div>
 <div id="viridis" class="section level2">
 <h2>viridis</h2>
 <p><a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html">viridis</a></p>
 <p><img src="/figures/viridis.png" height="200px" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>pacman::p_load(dplyr, ggplot2, viridis)
+mtcars %&gt;% 
+  filter(carb &lt;= 4) %&gt;% 
+  ggplot(aes(mpg, gear, color = factor(carb))) + 
+  geom_point(size = 4) + theme_classic() + 
+  scale_color_viridis(discrete = TRUE)</code></pre>
+<p><img src="/Notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-10-1.png" width="480" style="display: block; margin: auto;" /></p>
+</div>
+<div id="rcolorbrewer" class="section level2">
+<h2>RColorBrewer</h2>
+<p><a href="https://www.datanovia.com/en/blog/the-a-z-of-rcolorbrewer-palette/#using-rcolorbrewer-palettes-in-ggplot2">THE A – Z OF RCOLORBREWER PALETTE</a></p>
+<pre class="r"><code>pacman::p_load(dplyr, ggplot2)
+mtcars %&gt;% 
+  filter(carb &lt;= 4) %&gt;% 
+  ggplot(aes(mpg, gear, color = factor(carb))) + 
+  geom_point(size = 4) + theme_classic() + 
+  scale_color_manual(values = 
+      RColorBrewer::brewer.pal(n = 4, name = &#39;Set1&#39;))</code></pre>
+<p><img src="/Notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-11-1.png" width="480" style="display: block; margin: auto;" /></p>
+</div>
+<div id="brewer-function-from-ggplot2" class="section level2">
+<h2><code>_brewer()</code> function from <code>ggplot2</code></h2>
+<pre class="r"><code>pacman::p_load(dplyr, ggplot2)
+mtcars %&gt;% 
+  filter(carb &lt;= 4) %&gt;% 
+  ggplot(aes(mpg, gear, color = factor(carb))) + 
+  geom_point(size = 4) + theme_classic() + 
+  ggplot2::scale_color_brewer(palette = &quot;Dark2&quot;)</code></pre>
+<p><img src="/Notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-12-1.png" width="480" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div id="websites" class="section level1">
@@ -157,6 +219,14 @@ mtcars %&gt;%
 <li><a href="http://colorbrewer2.org/#type=sequential&amp;scheme=BuGn&amp;n=3">colorbrewer 2.0</a></li>
 </ol>
 <p><img src="/figures/colorbrewer2.0.png" height="200px" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>pacman::p_load(dplyr, ggplot2)
+color_var = c(&quot;#41ae76&quot;, &quot;#238b45&quot;, &quot;#006d2c&quot;, &quot;#00441b&quot;)
+mtcars %&gt;% 
+  filter(carb &lt;= 4) %&gt;% 
+  ggplot(aes(mpg, gear, color = factor(carb))) + 
+  geom_point(size = 4) + theme_classic() + 
+  scale_color_manual(values = color_var)</code></pre>
+<p><img src="/Notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-14-1.png" width="480" style="display: block; margin: auto;" /></p>
 </div>
 <div id="open-color" class="section level2">
 <h2>open color</h2>
@@ -164,6 +234,14 @@ mtcars %&gt;%
 <li><a href="https://yeun.github.io/open-color/">open color</a></li>
 </ol>
 <p><img src="/figures/opencolor.png" height="200px" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>pacman::p_load(dplyr, ggplot2)
+color_var = c(&quot;#e64980&quot;, &quot;#d6336c&quot;, &quot;#c2255c&quot;, &quot;#a61e4d&quot;)
+mtcars %&gt;% 
+  filter(carb &lt;= 4) %&gt;% 
+  ggplot(aes(mpg, gear, color = factor(carb))) + 
+  geom_point(size = 4) + theme_classic() + 
+  scale_color_manual(values = color_var)</code></pre>
+<p><img src="/Notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-16-1.png" width="480" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 

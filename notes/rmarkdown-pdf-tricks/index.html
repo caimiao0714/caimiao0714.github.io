@@ -16,9 +16,9 @@
     
       
       <meta property="description" content="To make a lot of tricks work, you need to header-includes:
-[&amp;hellip;] \newcommand{\blandscape}{\begin{landscape}}\newcommand{\elandscape}{\end{landscape}}Make a box around the content: &amp;hellip;">
+[&amp;hellip;] \newcommand{\blandscape}{\begin{landscape}} \newcommand{\elandscape}{\end{landscape}}  Make a box around the content: &amp;hellip;">
       <meta property="og:description" content="To make a lot of tricks work, you need to header-includes:
-[&amp;hellip;] \newcommand{\blandscape}{\begin{landscape}}\newcommand{\elandscape}{\end{landscape}}Make a box around the content: &amp;hellip;">
+[&amp;hellip;] \newcommand{\blandscape}{\begin{landscape}} \newcommand{\elandscape}{\end{landscape}}  Make a box around the content: &amp;hellip;">
       
     
 
@@ -143,7 +143,7 @@
 <li><code>keywords: flu shot; Chinese; attitudes; action</code></li>
 <li><code>bibliography: Refereces.bib</code></li>
 <li><code>csl: elsevier.csl</code></li>
-<li><code>geometry: "left=2cm,right=2cm,top=2cm,bottom=2cm"</code></li>
+<li><code>geometry: &quot;left=2cm,right=2cm,top=2cm,bottom=2cm&quot;</code></li>
 <li>Journal articles:</li>
 </ul>
 <pre><code>output:
@@ -192,6 +192,30 @@ urlcolor: red</code></pre>
   | Truck Transportation Safety, Fatigue, Driver Characteristics and Weather: 
   | An Exploratory Data Analysis and Visualization</code></pre>
 <p><img src="/figures/aligned-title.png" style="display: block; margin: auto;" /></p>
+<ul>
+<li>subfigures</li>
+</ul>
+<pre><code>fig.cap=&#39;All&#39;, fig.subcap=c(&#39;A&#39;, &#39;B&#39;, &#39;C&#39;),fig.ncol = 3, 
+out.width = &quot;33.3%&quot;, fig.align = &quot;center&quot;, 
+fig.width=3, fig.height=3*.618</code></pre>
+<pre class="r"><code>pacman::p_load(ggthemes, ggplot2)
+
+p1 = ggplot(data.frame(x = 1:10, y = 1:10), aes(x = x, y = y)) + 
+  geom_point() + theme_tufte()
+
+p2 = ggplot(cars, aes(speed, dist)) + 
+  geom_point() + theme_tufte()
+
+p3 = ggplot(iris, aes(Species, Sepal.Width)) + 
+  geom_boxplot() + theme_tufte()
+
+p1; p2; p3</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:fig-sub-ggplot2"></span>
+<img src="/Notes/2019-10-29-rmarkdown-pdf-tricks_files/figure-html/fig-sub-ggplot2-1.png" alt="All" width="33.3%" /><img src="/Notes/2019-10-29-rmarkdown-pdf-tricks_files/figure-html/fig-sub-ggplot2-2.png" alt="All" width="33.3%" /><img src="/Notes/2019-10-29-rmarkdown-pdf-tricks_files/figure-html/fig-sub-ggplot2-3.png" alt="All" width="33.3%" />
+<p class="caption">
+Figure 1: All
+</p>
+</div>
 <ul>
 <li>Unnumbered sections</li>
 </ul>

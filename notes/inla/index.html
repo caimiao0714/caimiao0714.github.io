@@ -16,9 +16,9 @@
     
       
       <meta property="description" content="一些有用的参考文献：
-">
+[&amp;hellip;] options(repos = c(getOption(&amp;quot;repos&amp;quot;), INLA=&amp;quot;https://inla.r-inla-download.org/R/stable&amp;quot;)) install.packages(&amp;quot;INLA&amp;quot;, dep = TRUE) pacman::p_load(INLA) &amp;hellip;">
       <meta property="og:description" content="一些有用的参考文献：
-">
+[&amp;hellip;] options(repos = c(getOption(&amp;quot;repos&amp;quot;), INLA=&amp;quot;https://inla.r-inla-download.org/R/stable&amp;quot;)) install.packages(&amp;quot;INLA&amp;quot;, dep = TRUE) pacman::p_load(INLA) &amp;hellip;">
       
     
 
@@ -29,6 +29,11 @@
 
     
     
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
 
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
@@ -95,11 +100,111 @@
 <li><a href="https://www.amazon.com/gp/product/B079K44S39?pf_rd_p=183f5289-9dc0-416f-942e-e8f213ef368b&amp;pf_rd_r=SDB96343GEYNCY5V3E8J">Wang Xiaofeng (2019) Bayesian Regression Modeling with INLA</a>,</li>
 <li><a href="https://people.bath.ac.uk/jjf23/inla/index.html">Faraway, Julian (2016) INLA for linear mixed models</a>.</li>
 </ol>
+<pre class="r"><code>options(repos = c(getOption(&quot;repos&quot;), 
+                  INLA=&quot;https://inla.r-inla-download.org/R/stable&quot;))
+install.packages(&quot;INLA&quot;, dep = TRUE)
+pacman::p_load(INLA)</code></pre>
+<div id="generalized-linear-models" class="section level1">
+<h1>Generalized linear models</h1>
+<p>Logistic regression</p>
+<pre class="r"><code>fit1 = inla(y ~ x1 + x2 + x3, 
+            data = d, 
+            family = &quot;binomial&quot;, 
+            control.compute = list(dic = TRUE, cpo = TRUE))</code></pre>
+<p>Poisson regression</p>
+<pre class="r"><code>fit3 = inla(y ~ x1 + x2 + x3,
+            data = d, 
+            E = offset_term, # no need to use log()
+            family = &quot;poisson&quot;, 
+            control.compute = list(dic = TRUE, cpo = TRUE))</code></pre>
+<p>Other models include</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">INLA family</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Negative binomial</td>
+<td align="right"><code>nbinomial</code></td>
+</tr>
+<tr class="even">
+<td align="left">Gamma</td>
+<td align="right"><code>gamma</code></td>
+</tr>
+<tr class="odd">
+<td align="left">Beta</td>
+<td align="right"><code>beta</code></td>
+</tr>
+<tr class="even">
+<td align="left">Zero-inflated Poisson</td>
+<td align="right"><code>zeroinflatedpoisson1</code></td>
+</tr>
+<tr class="odd">
+<td align="left">Zero-inflated negative binomial</td>
+<td align="right"><code>zeroinflatednbinomial1</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="linear-mixed-effects-model" class="section level1">
+<h1>Linear mixed-effects model</h1>
+<p>Random intercept-only model</p>
+<pre class="r"><code>fit = lme4::lmer(y ~ 1 + (1|group), data = d)
+fit = INLA::inla(y ~ 1 + f(group, model = &#39;iid&#39;), 
+                 family = &quot;gaussian&quot;, data = d)</code></pre>
+<p>Random intercept and slope model</p>
+<pre class="r"><code>fit = lme4::lmer(y ~ 1 + x1 + (1 + x1|group), data = d)
+fit = INLA::inla(y ~ 1 + x1 + f(group, model = &#39;iid&#39;) + 
+                   f(group1, x1, model = &#39;iid&#39;), 
+                 family = &quot;gaussian&quot;, data = d)</code></pre>
+<p>In the <code>f()</code> function, the first term defines the group and the second term defines the variable (random slope). If both random intercepts and random slopes are used, you need to create another grouping variable, even though the new grouping variable <code>group1</code> is identical with the original pne <code>group</code>.</p>
+</div>
+<div id="model-selection-and-checking" class="section level1">
+<h1>Model selection and checking</h1>
+<div id="model-selection" class="section level2">
+<h2>Model selection</h2>
+<p>To compare different models, INLA provides two criteria:</p>
+<ul>
+<li>DIC: the deviance information criterion</li>
+<li>WAIC: the Watanabe Akaike information criterion</li>
+</ul>
+<p>They can be calculated by specifying the following options</p>
+<pre><code>, control.compute = list(dic = TRUE, waic = TRUE)</code></pre>
+<p>which can be accessed using <code>fit$dic</code> and <code>fit$waic</code>.</p>
+</div>
+<div id="model-checking" class="section level2">
+<h2>Model checking</h2>
+<p>For model checking, INLA provides two “leave-one-out” predictive measures. They are not real LOO measures by resampling and refitting the data, but approximate measures.</p>
+<ul>
+<li>the conditional predictive ordinate (CPO)</li>
+<li>the probability integral transform (PIT)</li>
+</ul>
+<p>which are both calculated on the basis of the predictive distribution for the observed <span class="math inline">\(y_i\)</span> given all other observations (<span class="math inline">\(p(y_i|\mathbf{y}_{-i})\)</span>). This could be specified in INLA using the following syntax:</p>
+<pre><code>, control.compute = list(cpo = TRUE)</code></pre>
+<p>The predictive measures are available as <code>fit$cpo$cpo</code> for CPO and <code>fit$cpo$pit</code> for PIT.</p>
+</div>
+</div>
 
 
   <footer>
   
   
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
 
   
   <hr>

@@ -15,10 +15,10 @@
 
     
       
-      <meta property="description" content="Scientific Journal and Sci-Fi Themed Color Palettes for ggplot2
-[&amp;hellip;] pacman::p_load(dplyr, ggplot2) mtcars %&amp;gt;% filter(carb &amp;lt;= 4) %&amp;gt;% ggplot(aes(mpg, gear, color = factor(carb))) &#43; &amp;hellip;">
-      <meta property="og:description" content="Scientific Journal and Sci-Fi Themed Color Palettes for ggplot2
-[&amp;hellip;] pacman::p_load(dplyr, ggplot2) mtcars %&amp;gt;% filter(carb &amp;lt;= 4) %&amp;gt;% ggplot(aes(mpg, gear, color = factor(carb))) &#43; &amp;hellip;">
+      <meta property="description" content="Scientific Journal and Sci-Fi ThemedColor Palettes for ggplot2
+[&amp;hellip;] pacman::p_load(dplyr, ggplot2)mtcars %&amp;gt;% filter(carb &amp;lt;= 4) %&amp;gt;% ggplot(aes(mpg, gear, color = factor(carb))) &#43; &amp;hellip;">
+      <meta property="og:description" content="Scientific Journal and Sci-Fi ThemedColor Palettes for ggplot2
+[&amp;hellip;] pacman::p_load(dplyr, ggplot2)mtcars %&amp;gt;% filter(carb &amp;lt;= 4) %&amp;gt;% ggplot(aes(mpg, gear, color = factor(carb))) &#43; &amp;hellip;">
       
     
 
@@ -144,7 +144,7 @@ mtcars %&gt;%
   ggplot(aes(mpg, gear, color = factor(carb))) + 
   geom_point(size = 4) + theme_classic() + 
   ggsci::scale_color_npg()</code></pre>
-<p><img src="/Notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-1-1.png" width="480" style="display: block; margin: auto;" /></p>
+<p><img src="/notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-1-1.png" width="480" style="display: block; margin: auto;" /></p>
 </div>
 <div id="mappalettes" class="section level2">
 <h2>MapPalettes</h2>
@@ -168,7 +168,7 @@ mtcars %&gt;%
   geom_point(size = 4) + theme_classic() + 
   scale_color_manual(values = 
       MapPalettes::map_palette(&quot;tealberry_pie&quot;, 4))</code></pre>
-<p><img src="/Notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-3-1.png" width="480" style="display: block; margin: auto;" /></p>
+<p><img src="/notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-3-1.png" width="480" style="display: block; margin: auto;" /></p>
 </div>
 <div id="nationalparkcolors" class="section level2">
 <h2>nationalparkcolors</h2>
@@ -185,7 +185,7 @@ mtcars %&gt;%
   geom_point(size = 4) + theme_classic() + 
   scale_color_manual(values = 
       nationalparkcolors::park_palette(&quot;MtRainier&quot;, 4))</code></pre>
-<p><img src="/Notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-6-1.png" width="480" style="display: block; margin: auto;" /></p>
+<p><img src="/notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-6-1.png" width="480" style="display: block; margin: auto;" /></p>
 </div>
 <div id="wesanderson" class="section level2">
 <h2>wesanderson</h2>
@@ -209,7 +209,7 @@ mtcars %&gt;%
   geom_point(size = 4) + theme_classic() + 
   scale_color_manual(values = 
       wesanderson::wes_palette(n = 4, name = &quot;GrandBudapest1&quot;))</code></pre>
-<p><img src="/Notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-9-1.png" width="480" style="display: block; margin: auto;" /></p>
+<p><img src="/notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-9-1.png" width="480" style="display: block; margin: auto;" /></p>
 </div>
 <div id="viridis" class="section level2">
 <h2>viridis</h2>
@@ -221,7 +221,7 @@ mtcars %&gt;%
   ggplot(aes(mpg, gear, color = factor(carb))) + 
   geom_point(size = 4) + theme_classic() + 
   viridis::scale_color_viridis(discrete = TRUE)</code></pre>
-<p><img src="/Notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-11-1.png" width="480" style="display: block; margin: auto;" /></p>
+<p><img src="/notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-11-1.png" width="480" style="display: block; margin: auto;" /></p>
 </div>
 <div id="rcolorbrewer" class="section level2">
 <h2>RColorBrewer</h2>
@@ -233,7 +233,7 @@ mtcars %&gt;%
   geom_point(size = 4) + theme_classic() + 
   scale_color_manual(values = 
       RColorBrewer::brewer.pal(n = 4, name = &#39;Set1&#39;))</code></pre>
-<p><img src="/Notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-12-1.png" width="480" style="display: block; margin: auto;" /></p>
+<p><img src="/notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-12-1.png" width="480" style="display: block; margin: auto;" /></p>
 </div>
 <div id="colorspace-package" class="section level2">
 <h2><code>colorspace</code> package</h2>
@@ -247,14 +247,14 @@ mtcars %&gt;%
   ggplot(aes(mpg, gear, color = factor(carb))) + 
   geom_point(size = 4) + theme_classic() + 
   ggplot2::scale_color_brewer(palette = &quot;Dark2&quot;)</code></pre>
-<p><img src="/Notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-13-1.png" width="480" style="display: block; margin: auto;" /></p>
+<p><img src="/notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-13-1.png" width="480" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>pacman::p_load(dplyr, ggplot2)
 mtcars %&gt;% 
   filter(carb &lt;= 4) %&gt;% 
   ggplot(aes(mpg, gear, color = factor(carb))) + 
   geom_point(size = 4) + theme_classic() + 
   ggplot2::scale_colour_grey()</code></pre>
-<p><img src="/Notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-14-1.png" width="480" style="display: block; margin: auto;" /></p>
+<p><img src="/notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-14-1.png" width="480" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div id="websites" class="section level1">
@@ -272,7 +272,7 @@ mtcars %&gt;%
   ggplot(aes(mpg, gear, color = factor(carb))) + 
   geom_point(size = 4) + theme_classic() + 
   scale_color_manual(values = color_var)</code></pre>
-<p><img src="/Notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-16-1.png" width="480" style="display: block; margin: auto;" /></p>
+<p><img src="/notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-16-1.png" width="480" style="display: block; margin: auto;" /></p>
 </div>
 <div id="open-color" class="section level2">
 <h2>open color</h2>
@@ -287,7 +287,7 @@ mtcars %&gt;%
   ggplot(aes(mpg, gear, color = factor(carb))) + 
   geom_point(size = 4) + theme_classic() + 
   scale_color_manual(values = color_var)</code></pre>
-<p><img src="/Notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-18-1.png" width="480" style="display: block; margin: auto;" /></p>
+<p><img src="/notes/2019-11-02-color-palletes-in-r_files/figure-html/unnamed-chunk-18-1.png" width="480" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 

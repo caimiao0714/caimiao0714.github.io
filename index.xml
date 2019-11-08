@@ -96,8 +96,8 @@ But those drivers are the top echelon of the occupation and are not representati
       
       <guid>/notes/inla/</guid>
       <description>一些有用的参考文献：
-Virgilio Gómez-Rubio (2019), A gentle INLA tutorial, Haakon Bakka (2017) Small Tutorials on INLA, Wang Xiaofeng (2019) Bayesian Regression Modeling with INLA, Faraway, Julian (2016) INLA for linear mixed models.  options(repos = c(getOption(&amp;quot;repos&amp;quot;), INLA=&amp;quot;https://inla.r-inla-download.org/R/stable&amp;quot;)) install.packages(&amp;quot;INLA&amp;quot;, dep = TRUE) pacman::p_load(INLA) Generalized linear models Logistic regression
-fit1 = inla(y ~ x1 + x2 + x3, data = d, family = &amp;quot;binomial&amp;quot;, control.compute = list(dic = TRUE, cpo = TRUE)) Poisson regression</description>
+Virgilio Gómez-Rubio (2020) Bayesian inference with INLA, Faraway, Julian (2016) INLA for linear mixed models. A gentle INLA tutorial, Haakon Bakka (2017) Small Tutorials on INLA, Wang Xiaofeng (2019) Bayesian Regression Modeling with INLA, Paula Moraga (2019) Geospatial Health Data: Modeling and Visualization with R-INLA and Shiny  options(repos = c(getOption(&amp;quot;repos&amp;quot;), INLA=&amp;quot;https://inla.r-inla-download.org/R/stable&amp;quot;)) install.packages(&amp;quot;INLA&amp;quot;, dep = TRUE) pacman::p_load(INLA) Generalized linear models Logistic regression
+fit1 = inla(y ~ x1 + x2 + x3, data = d, family = &amp;quot;binomial&amp;quot;, control.</description>
     </item>
     
     <item>

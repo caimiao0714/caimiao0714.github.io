@@ -94,11 +94,12 @@
 
 <p>一些有用的参考文献：</p>
 <ol style="list-style-type: decimal">
-<li><a href="Bayesian%20inference%20with%20INLA">Virgilio Gómez-Rubio (2019)</a>,</li>
+<li><a href="https://becarioprecario.bitbucket.io/inla-gitbook/index.html">Virgilio Gómez-Rubio (2020) Bayesian inference with INLA</a>,</li>
+<li><a href="https://people.bath.ac.uk/jjf23/inla/index.html">Faraway, Julian (2016) INLA for linear mixed models</a>.</li>
 <li><a href="https://www.precision-analytics.ca/blog/a-gentle-inla-tutorial/">A gentle INLA tutorial</a>,</li>
 <li><a href="https://haakonbakka.bitbucket.io/organisedtopics.html">Haakon Bakka (2017) Small Tutorials on INLA</a>,</li>
 <li><a href="https://www.amazon.com/gp/product/B079K44S39?pf_rd_p=183f5289-9dc0-416f-942e-e8f213ef368b&amp;pf_rd_r=SDB96343GEYNCY5V3E8J">Wang Xiaofeng (2019) Bayesian Regression Modeling with INLA</a>,</li>
-<li><a href="https://people.bath.ac.uk/jjf23/inla/index.html">Faraway, Julian (2016) INLA for linear mixed models</a>.</li>
+<li><a href="https://paula-moraga.github.io/book-geospatial/">Paula Moraga (2019) Geospatial Health Data: Modeling and Visualization with R-INLA and Shiny</a></li>
 </ol>
 <pre class="r"><code>options(repos = c(getOption(&quot;repos&quot;), 
                   INLA=&quot;https://inla.r-inla-download.org/R/stable&quot;))
@@ -186,6 +187,49 @@ fit = INLA::inla(y ~ 1 + x1 + f(group, model = &#39;iid&#39;) +
 <pre><code>, control.compute = list(cpo = TRUE)</code></pre>
 <p>The predictive measures are available as <code>fit$cpo$cpo</code> for CPO and <code>fit$cpo$pit</code> for PIT.</p>
 </div>
+</div>
+<div id="performance-issues" class="section level1">
+<h1>Performance issues</h1>
+<ol style="list-style-type: decimal">
+<li><p>The default setting for INLA should have the best performance, although it may lose some accuracy.</p></li>
+<li><p>Using Gaussian approximation that integration over <span class="math inline">\(\mathbf{\theta}\)</span> (empirical Bayes) can be done using</p></li>
+</ol>
+<pre><code>control.inla = list(strategy = &quot;gaussian&quot;, int.strategy = &quot;eb&quot;)</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>If performance is not an issue and you want more accuracy:</li>
+</ol>
+<pre><code>, control.ina = list(strategy = &quot;laplace&quot;, 
+      int.strategy = &quot;grid&quot;, 
+      dz = 0.1, diff.logdens = 20), 
+      num.threads = 1</code></pre>
+<pre class="r"><code>pacman::p_load(microbenchmark)
+
+default_set = function(){
+  f1 = inla(Sepal.Length ~ Sepal.Width + Petal.Length + Petal.Width + Species,
+            family = &quot;gaussian&quot;, data = iris)
+}
+
+empir_bayes = function(){
+  f2 = inla(Sepal.Length ~ Sepal.Width + Petal.Length + Petal.Width + Species,
+          family = &quot;gaussian&quot;, data = iris,
+          control.inla = list(strategy = &quot;gaussian&quot;, int.strategy = &quot;eb&quot;))
+}
+
+laplace = function(){
+  f2 = inla(Sepal.Length ~ Sepal.Width + Petal.Length + Petal.Width + Species,
+          family = &quot;gaussian&quot;, data = iris,
+          control.ina = list(strategy = &quot;laplace&quot;, int.strategy = &quot;grid&quot;, 
+                             dz = 0.1, diff.logdens = 20))
+}
+
+result = microbenchmark(default_set, empir_bayes, laplace, times = 100L)</code></pre>
+<pre class="r"><code>result</code></pre>
+<pre><code>## Unit: nanoseconds
+##         expr min lq  mean median uq  max neval cld
+##  default_set  25 26 32.79     27 27  483   100   a
+##  empir_bayes  25 26 43.41     27 28 1596   100   a
+##      laplace  25 26 30.61     27 27  416   100   a</code></pre>
+<p>In terms of speed: default setting &gt; empirical bayes &gt; laplace.</p>
 </div>
 
 

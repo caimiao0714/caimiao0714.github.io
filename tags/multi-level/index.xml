@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>multi-level on </title>
+    <link>/tags/multi-level/</link>
+    <description>Recent content in multi-level on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 21 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/multi-level/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fast multi-level model with lmer4</title>
+      <link>/notes/fast-multi-level-model-with-lmer4/</link>
+      <pubDate>Thu, 21 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/notes/fast-multi-level-model-with-lmer4/</guid>
+      <description>References:
+Steven V. Miller: Mixed Effects Modeling Tips: Use a Fast Optimizer, but Perform Optimizer Checkslme4: lme4 Performance Tipslme4::glmer vs. Stata’s melogit commandlibrary(lme4)f_lmer4_logit2 &amp;lt;- glmer(y ~ x1 + x2 + (1 + x1 | id), data = z, family = binomial(link = &amp;quot;logit&amp;quot;),nAGQ = 0L,control = glmerControl(optimizer=&amp;quot;NLOPT_LN_BOBYQA&amp;quot;,calc.derivs = FALSE,optCtrl=list(maxfun=2e5, method = &amp;quot;nlminb&amp;quot;, starttests = FALSE, kkt = FALSE)))</description>
+    </item>
+    
+  </channel>
+</rss>

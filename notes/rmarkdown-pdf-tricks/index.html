@@ -124,7 +124,6 @@
 \end{enumerate}
 
 \end{minipage}}</code></pre>
-<p><img src="/figures/fbox-LaTeX.png" /><!-- --></p>
 <ul>
 <li>Waterproof:</li>
 </ul>
@@ -135,7 +134,6 @@
     }}
   }
 }</code></pre>
-<p><img src="/figures/water-proof.png" height="700px" style="display: block; margin: auto;" /></p>
 </div>
 <div id="yml-settings" class="section level1">
 <h1><code>yml</code> settings</h1>
@@ -143,7 +141,7 @@
 <li><code>keywords: flu shot; Chinese; attitudes; action</code></li>
 <li><code>bibliography: Refereces.bib</code></li>
 <li><code>csl: elsevier.csl</code></li>
-<li><code>geometry: &quot;left=2cm,right=2cm,top=2cm,bottom=2cm&quot;</code></li>
+<li><code>geometry: "left=2cm,right=2cm,top=2cm,bottom=2cm"</code></li>
 <li>Journal articles:</li>
 </ul>
 <pre><code>output:
@@ -191,11 +189,10 @@ urlcolor: red</code></pre>
 <pre><code>title: |
   | Truck Transportation Safety, Fatigue, Driver Characteristics and Weather: 
   | An Exploratory Data Analysis and Visualization</code></pre>
-<p><img src="/figures/aligned-title.png" style="display: block; margin: auto;" /></p>
 <ul>
 <li>subfigures</li>
 </ul>
-<pre><code>fig.cap=&#39;All&#39;, fig.subcap=c(&#39;A&#39;, &#39;B&#39;, &#39;C&#39;),fig.ncol = 3, 
+<pre><code>fig.cap=&#39;All&#39;, fig.subcap=c(&#39;A&#39;, &#39;B&#39;, &#39;C&#39;), fig.ncol = 3, 
 out.width = &quot;33.3%&quot;, fig.align = &quot;center&quot;, 
 fig.width=3, fig.height=3*.618</code></pre>
 <pre class="r"><code>pacman::p_load(ggthemes, ggplot2)
@@ -211,7 +208,7 @@ p3 = ggplot(iris, aes(Species, Sepal.Width)) +
 
 p1; p2; p3</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:fig-sub-ggplot2"></span>
-<img src="/Notes/2019-10-29-rmarkdown-pdf-tricks_files/figure-html/fig-sub-ggplot2-1.png" alt="All" width="33.3%" /><img src="/Notes/2019-10-29-rmarkdown-pdf-tricks_files/figure-html/fig-sub-ggplot2-2.png" alt="All" width="33.3%" /><img src="/Notes/2019-10-29-rmarkdown-pdf-tricks_files/figure-html/fig-sub-ggplot2-3.png" alt="All" width="33.3%" />
+<img src="/notes/2019-10-29-rmarkdown-pdf-tricks_files/figure-html/fig-sub-ggplot2-1.png" alt="All" width="33.3%" /><img src="/notes/2019-10-29-rmarkdown-pdf-tricks_files/figure-html/fig-sub-ggplot2-2.png" alt="All" width="33.3%" /><img src="/notes/2019-10-29-rmarkdown-pdf-tricks_files/figure-html/fig-sub-ggplot2-3.png" alt="All" width="33.3%" />
 <p class="caption">
 Figure 1: All
 </p>
@@ -226,14 +223,22 @@ Figure 1: All
 </ul>
 <pre class="r"><code>install.packages(&quot;webshot&quot;)
 webshot::install_phantomjs()</code></pre>
-<p>```
-References {#references .unnumbered}
-===</p>
-<p><code>{=latex, eval=FALSE} \everypar{\hangafter=1 \setlength{\hangindent}{3em}}{\par} \setlength\parskip{0.3em} \setlength\parindent{0pt}</code></p>
+<pre><code>References {#references .unnumbered}
+===
+
+```{=latex, eval=FALSE}
+\everypar{\hangafter=1 \setlength{\hangindent}{3em}}{\par}
+\setlength\parskip{0.3em}
+\setlength\parindent{0pt}</code></pre>
 <div id="refs">
 
 </div>
-<p>```</p>
+<pre><code>
+
+- Read NYT for free
+
+```{=text}
+javascript:var currentsite%3Ddocument.querySelector(&quot;meta%5Bproperty%3D&#39;al%3Aandroid%3Aapp_name&#39;%5D&quot;)%3Fdocument.querySelector(&quot;meta%5Bproperty%3D&#39;al%3Aandroid%3Aapp_name&#39;%5D&quot;).content%3Awindow.location.href%3Bfunction isPage(b)%7Bconsole.log(b%2B&quot; &quot;%2Bcurrentsite.includes(b))%3Breturn currentsite.includes(b)%7Dfunction process(b)%7Bvar a%3Db%3BisPage(&quot;NYTimes&quot;)%26%26(document.querySelector(&quot;html&quot;).innerHTML%3Da)%3BisPage(&quot;Medium&quot;)%26%26(a%3Db.replace(%2F&lt;%5C%2F%3Fnoscript&gt;%2Fg%2C&quot;&quot;)%2Cdocument.querySelector(&quot;html&quot;).innerHTML%3Da)%3Bif(isPage(&quot;Bloomberg&quot;)%7C%7CisPage(&quot;businessinsider&quot;))a%3Ddocument.createElement(&quot;html&quot;)%2Ca.innerHTML%3Db%2Ca.querySelectorAll(&quot;script&quot;).forEach(function(a)%7Breturn a.outerHTML%3D&quot;&quot;%7D)%2Ca%3Da.outerHTML%2Cdocument.open()%2Cdocument.write(a)%2Cdocument.close()%3BisPage(&quot;businessinsider&quot;)%26%26(a%3Ddocument.createElement(&quot;html&quot;)%2Ca.innerHTML%3Db%2Ca.querySelectorAll(&quot;script&quot;).forEach(function(a)%7Breturn a.outerHTML%3D&quot;&quot;%7D)%2Ca.querySelectorAll(&quot;figure&quot;).forEach(function(a)%7Ba.innerHTML%3Da.querySelector(&quot;noscript&quot;).innerHTML%7D)%2Ca%3Da.outerHTML%2Cdocument.open()%2Cdocument.write(a)%2Cdocument.close())%7Dfetch(window.location.href%2C%7Bcredentials%3A&quot;omit&quot;%2Credirect%3A&quot;follow&quot;%2Cmode%3A&quot;no-cors&quot;%7D).then(function(b)%7Breturn b.text()%7D).then(function(b)%7Bprocess(b)%7D)%3Bvoid+0</code></pre>
 </div>
 
 

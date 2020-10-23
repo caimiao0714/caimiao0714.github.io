@@ -5,7 +5,17 @@
     <link>/</link>
     <description>Recent content in 简介 on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 15 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deep Learning for Coders with fastai &amp; Pytorch</title>
+      <link>/notes/deep-learning-for-coders-with-fastai-pytorch/</link>
+      <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/notes/deep-learning-for-coders-with-fastai-pytorch/</guid>
+      <description>Why GPU is powerful for deep learning?
+Graphics Processing units (GPUs), also known as graphics card, is a special kind of processor in your computer that can handle thousands of single tasks at the same time, especially designed for displaying 3D environments on a computer for playing games. These same basic tasks are very similar to what neural networks do, such that GPUs can run neural networks hundreds of times faster than regular GPUs.</description>
+    </item>
+    
     <item>
       <title>Anaconda教程</title>
       <link>/post/2019/12/15/anaconda-tutorial/</link>

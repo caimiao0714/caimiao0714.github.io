@@ -12,8 +12,7 @@
       <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>/notes/deep-learning-for-coders-with-fastai-pytorch/</guid>
-      <description>Why GPU is powerful for deep learning?
-Graphics Processing units (GPUs), also known as graphics card, is a special kind of processor in your computer that can handle thousands of single tasks at the same time, especially designed for displaying 3D environments on a computer for playing games. These same basic tasks are very similar to what neural networks do, such that GPUs can run neural networks hundreds of times faster than regular GPUs.</description>
+      <description>Chapter 1 Introduction Why GPU is powerful for deep learning? Graphics Processing units (GPUs), also known as graphics card, is a special kind of processor in your computer that can handle thousands of single tasks at the same time, especially designed for displaying 3D environments on a computer for playing games. These same basic tasks are very similar to what neural networks do, such that GPUs can run neural networks hundreds of times faster than regular GPUs.</description>
     </item>
     
   </channel>

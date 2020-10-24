@@ -5,15 +5,23 @@
     <link>/</link>
     <description>Recent content in 简介 on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 22 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>用ralger包进行网络爬虫</title>
+      <link>/notes/ralger/</link>
+      <pubDate>Fri, 23 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/notes/ralger/</guid>
+      <description>#install.packages(&amp;quot;ralger&amp;quot;) library(ralger) w = &amp;#39;http://tianqi.2345.com/wea_history/54511.htm&amp;#39; titles_scrap(link = &amp;quot;https://www.nytimes.com/&amp;quot;) ## [1] &amp;quot;Listen to ‘The Daily’&amp;quot; ## [2] &amp;quot;Listen to ‘Sway’ With Kara Swisher&amp;quot; ## [3] &amp;quot;Listen to the Modern Love Podcast&amp;quot; ## [4] &amp;quot;After Final Debate, Campaigns Enter Homestretch&amp;quot; ## [5] &amp;quot;Susan Collins Hasn’t Changed Much, but Maine Has&amp;quot; ## [6] &amp;quot;A Trump Victory May Push His Defense Secretary Out an Open Door&amp;quot; ## [7] &amp;quot;U.S. Virus Hospitalizations Up 40 Percent in the Last Month&amp;quot; ## [8] &amp;quot;At 12, She’s a Covid ‘Long Hauler’&amp;quot; ## [9] &amp;quot;Out of Work in America&amp;quot; ## [10] &amp;quot;The Talk of Montauk&amp;quot; ## [11] &amp;quot;We’re At Home, Too&amp;quot; ## [12] &amp;quot;Why Does Trump Win With White Men?</description>
+    </item>
+    
     <item>
       <title>Deep Learning for Coders with fastai &amp; Pytorch</title>
       <link>/notes/deep-learning-for-coders-with-fastai-pytorch/</link>
       <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>/notes/deep-learning-for-coders-with-fastai-pytorch/</guid>
-      <description>Why GPU is powerful for deep learning?
-Graphics Processing units (GPUs), also known as graphics card, is a special kind of processor in your computer that can handle thousands of single tasks at the same time, especially designed for displaying 3D environments on a computer for playing games. These same basic tasks are very similar to what neural networks do, such that GPUs can run neural networks hundreds of times faster than regular GPUs.</description>
+      <description>Chapter 1 Introduction Why GPU is powerful for deep learning? Graphics Processing units (GPUs), also known as graphics card, is a special kind of processor in your computer that can handle thousands of single tasks at the same time, especially designed for displaying 3D environments on a computer for playing games. These same basic tasks are very similar to what neural networks do, such that GPUs can run neural networks hundreds of times faster than regular GPUs.</description>
     </item>
     
     <item>

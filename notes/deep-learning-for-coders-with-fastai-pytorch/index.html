@@ -15,10 +15,8 @@
 
     
       
-      <meta property="description" content="Why GPU is powerful for deep learning?
-Graphics Processing units (GPUs), also known as graphics card, is a special kind of processor in your computer that can handle thousands of single tasks at the &amp;hellip;">
-      <meta property="og:description" content="Why GPU is powerful for deep learning?
-Graphics Processing units (GPUs), also known as graphics card, is a special kind of processor in your computer that can handle thousands of single tasks at the &amp;hellip;">
+      <meta property="description" content="Graphics Processing units (GPUs), also known as graphics card, is a special kind of processor in your computer that can handle thousands of single tasks at the same time, especially designed for &amp;hellip;">
+      <meta property="og:description" content="Graphics Processing units (GPUs), also known as graphics card, is a special kind of processor in your computer that can handle thousands of single tasks at the same time, especially designed for &amp;hellip;">
       
     
 
@@ -87,8 +85,59 @@ Graphics Processing units (GPUs), also known as graphics card, is a special kind
 
 
 
-<p><strong>Why GPU is powerful for deep learning?</strong></p>
+<div id="chapter-1-introduction" class="section level1">
+<h1>Chapter 1 Introduction</h1>
+<div id="why-gpu-is-powerful-for-deep-learning" class="section level3">
+<h3>Why GPU is powerful for deep learning?</h3>
 <p>Graphics Processing units (GPUs), also known as graphics card, is a special kind of processor in your computer that can handle thousands of single tasks at the same time, especially designed for displaying 3D environments on a computer for playing games. These same basic tasks are very similar to what neural networks do, such that GPUs can run neural networks hundreds of times faster than regular GPUs. All modern computers contain a GPU, but few contain that right kind of GPU necessary for deep learning.</p>
+<p>Some terminologies</p>
+<ul>
+<li><em>architecture</em>: the functional form of the model (or just model)</li>
+<li><em>parameters</em>: weights</li>
+<li>the predictions are calculated from the independent variable, which is the data not including the labels</li>
+<li>the results of the models are called <em>predictions</em></li>
+<li>the measure of performance is called the <em>loss</em>. The loss depends on not only on the predictions, but also on the correct labels.</li>
+<li>A <em>metric</em> is a function that measures the quality of the model’s predictions using the validation set, and will be printed at the end of each epoch.</li>
+</ul>
+<p>A good choice for <em>loss</em> is a choice that is easy for stochastic gradient descent to use; a good choice for <em>metric</em> is easy for you to understand. In summary, loss is for machines while metric is for human beings.</p>
+<ul>
+<li>A model that has weights that have already been trained on another dataset is called a <em>pretrained model.</em></li>
+<li>When using a pretrained model, <code>cnn_learner</code> will remove the last layer, since that is always specifically customized to the original training task. The last layer is known as the <em>head</em>.</li>
+<li>Using a pretrained model for a task different from what it was originally trained for is known as <em>transfer learning</em>.</li>
+<li><em>Fine tuning</em>: a transfer learning technique that updates the parameters of pretrained model by training for additional epochs using a different task from that used for pretraining.</li>
+<li><em>An epoch</em> is one complete pass through the dataset.</li>
+<li>Creating a model that can recognize the content of every individual pixel in an image is called <em>segmentation</em>.</li>
+<li><em>Hyperparameters</em>: parameters of parameters.</li>
+</ul>
+</div>
+<div id="training-validation-and-test-sets" class="section level3">
+<h3>Training, validation, and test sets</h3>
+<p>See this <a href="https://machinelearningmastery.com/difference-test-validation-datasets/"></a></p>
+<p><strong>Validation and test sets are different!</strong></p>
+<p>“The literature on machine learning often reverses the meaning of “validation” and “test” sets. This is the most blatant example of the terminological confusion that pervades artificial intelligence research.</p>
+<p>The crucial point is that a test set, by the standard definition in the NN [neural net] literature, is never used to choose among two or more networks, so that the error on the test set provides an unbiased estimate of the generalization error (assuming that the test set is representative of the population, etc.)."</p>
+<p>“If the test set is locked away, but you still want to measure performance on unseen data as a way of selecting a good hypothesis, then divide the available data (without the test set) into a training set and a validation set.”</p>
+<p>—- Stuart Russell and Peter Norvig, page 709, Artificial Intelligence: A Modern Approach, 2009 (3rd edition)</p>
+<p>In Ripley’s book “Pattern Recognition and Neural Networks, this idea of separating validation set from the training set is corroborated:</p>
+<ul>
+<li><em>Training set</em>: A set of examples used for learning, that is to fit the parameters of the classifier.</li>
+<li><em>Validation set</em>: The sample of data used to provide an unbiased evaluation of a model fit on the training dataset while tuning model hyperparameters. The evaluation becomes more biased as skill on the validation dataset is incorporated into the model configuration.</li>
+<li><em>Test set</em>: The sample of data used to provide an unbiased evaluation of a final model fit on the training dataset. It is used only to assess the performance of a fully-specified model.</li>
+</ul>
+<p>The validation dataset may also play a role in other forms of model preparation, such as feature selection. The final model could be fit on the aggregate of the training and validation datasets.</p>
+</div>
+<div id="overfitting-is-the-single-most-important-and-challenging-issue" class="section level3">
+<h3>Overfitting is the single most important and challenging issue</h3>
+<p>However, you should use the methods to avoid overfitting only after you have confirmed that overfitting is occurring.</p>
+</div>
+</div>
+<div id="chapter-2-from-models-to-production" class="section level1">
+<h1>Chapter 2: From Models to Production</h1>
+<ul>
+<li><em>DataLoaders</em>: A fastai class that stores multiple <code>DataLoader</code> objects you pass to it — normally a train and a valid, although it’s possible to have as many as you like. The first two are made available as properties.</li>
+<li><em>Data augmentation</em>: creating random variations of our input data, such that they appear different but do not change the meaning of the data.</li>
+</ul>
+</div>
 
 
   <footer>
